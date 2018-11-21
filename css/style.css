@@ -597,10 +597,12 @@ body {
 
 .active-link {
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s; }
+  transition: transform 0.2s, background-color 0.2s, transform 0.2s; }
   .active-link:hover {
     background-color: #222222;
     transform: scale(1.05); }
+  .active-link:active {
+    transform: scale(0.95); }
 
 .button-all-product {
   margin: 0 auto;
@@ -949,6 +951,11 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   margin-top: 56px; }
+  .check-in_container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
 
 .check-in-menu li {
   list-style-type: none;
@@ -1709,5 +1716,15 @@ body {
 
 .margin-top {
   margin-top: -12px; }
+
+.margin-right {
+  margin-right: 15px; }
+
+.margin-left {
+  margin-left: 3px; }
+
+.delete-arrow::-webkit-outer-spin-button, .delete-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
