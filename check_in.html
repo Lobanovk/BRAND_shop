@@ -90,8 +90,8 @@
               <div class="go-to-card"><a class="go-to-card-text"
                                          href="shoping_cart.html"><span>Go&nbsp;to&nbsp;cart</span></a>
               </div>
-            
-            
+
+
             </div>
           </div>
           <div class="account"><a class="account-text" href="#">
@@ -165,20 +165,21 @@
       <div class="registred">
         <form class="email-password" action="#">
           <p>Name<sup>&#42;</sup></p>
-          <input type="text" placeholder="name" required>
+          <input type="text" name="name" placeholder="name" required>
+          <p>Gender<sup>&#42;</sup></p>
           <div class="margin-bottom-for-checkout margin-left">
-            <input type="radio" class="radio" name="a" id="M" checked><label class="margin-right"
+            <input type="radio" class="radio" name="gender" id="M" checked><label class="margin-right"
               for="M">Men</label>
-            <input type="radio" class="radio" name="a" id="W"><label for="W">Woman</label>
+            <input type="radio" class="radio" name="gender" id="W"><label for="W">Woman</label>
           </div>
           <p>EMAIL&nbsp;ADDRESS<sup>&#42;</sup></p>
-          <input type="email" placeholder="email" required>
+          <input type="email" name="email" placeholder="email" required>
           <p>ADD Credit card<sup>&#42;</sup></p>
-          <input class="delete-arrow" type="number" placeholder="credit card" required>
+          <input class="delete-arrow" type="number" name="phone" placeholder="credit card" required>
           <p>PASSWORD<sup>&#42;</sup></p>
-          <input type="password" placeholder="password" required>
+          <input type="password" name="password" placeholder="password" required>
           <p>REPEAT PASSWORD<sup>&#42;</sup></p>
-          <input type="password" placeholder="repeat password" required>
+          <input type="password" name="password_repeat" placeholder="repeat password" required>
           <p><sup>&#42;</sup>Required Fileds</p>
           <div class="flex-special">
             <input class="log-in" type="submit" value="Check In">
