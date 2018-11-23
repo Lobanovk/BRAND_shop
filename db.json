@@ -58,5 +58,22 @@
     }
   ],
   "cart": [],
-  "users":[]
+  "users": [
+    {
+      "username": "Kirill",
+      "password": "12345678",
+      "email": "mymail@list.com",
+      "gender": "m",
+      "credit_card": "4444-4444-4444-4444",
+      "id": 1
+    },
+    {
+      "username": "Mary",
+      "password": "12345678",
+      "email": "mymail@list.com",
+      "gender": "w",
+      "credit_card": "1111-1111-1111-1111",
+      "id": 2
+    }
+  ]
 }

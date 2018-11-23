@@ -1095,8 +1095,8 @@ body {
     color: #ff0d0d;
     font-size: 13px;
     font-weight: 400; }
-  .email-password p:last-of-type {
-    color: #ff0d0d; }
+.email-password .last-p {
+  color: #ff0d0d; }
 .email-password input {
   width: 360px;
   height: 45px;
@@ -1105,6 +1105,10 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 16px; }
+.email-password .is-invalid {
+  border-color: #dc3545; }
+.email-password .is-valid {
+  border-color: #28a745; }
 
 .flex-special a {
   padding-left: 32px;
@@ -1726,5 +1730,12 @@ body {
 .delete-arrow::-webkit-outer-spin-button, .delete-arrow::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.85rem;
+  font-size: 80%;
+  color: #dc3545; }
 
 /*# sourceMappingURL=style.css.map */

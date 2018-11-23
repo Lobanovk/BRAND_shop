@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -164,23 +167,35 @@
     <section class="check-in_container">
       <div class="registred">
         <form class="email-password" action="#">
+          <div>
           <p>Name<sup>&#42;</sup></p>
           <input type="text" name="name" placeholder="name" required>
+          </div>
+          <div>
           <p>Gender<sup>&#42;</sup></p>
           <div class="margin-bottom-for-checkout margin-left">
-            <input type="radio" class="radio" name="gender" id="M" checked><label class="margin-right"
+            <input type="radio" class="radio" name="gender" id="M" value="m" checked><label class="margin-right"
               for="M">Men</label>
-            <input type="radio" class="radio" name="gender" id="W"><label for="W">Woman</label>
+            <input type="radio" class="radio" name="gender" id="W" value="w" ><label for="W">Woman</label>
           </div>
+          </div>
+          <div>
           <p>EMAIL&nbsp;ADDRESS<sup>&#42;</sup></p>
-          <input type="email" name="email" placeholder="email" required>
+          <input type="text" name="email" placeholder="email" required>
+          </div>
+          <div>
           <p>ADD Credit card<sup>&#42;</sup></p>
-          <input class="delete-arrow" type="number" name="phone" placeholder="credit card" required>
+          <input class="delete-arrow" type="text" name="credit_card" placeholder="credit card" required>
+          </div>
+          <div>
           <p>PASSWORD<sup>&#42;</sup></p>
           <input type="password" name="password" placeholder="password" required>
+          </div>
+          <div>
           <p>REPEAT PASSWORD<sup>&#42;</sup></p>
           <input type="password" name="password_repeat" placeholder="repeat password" required>
-          <p><sup>&#42;</sup>Required Fileds</p>
+          </div>
+          <p class=" last-p"><sup>&#42;</sup>Required Fileds</p>
           <div class="flex-special">
             <input class="log-in" type="submit" value="Check In">
           </div>
@@ -291,6 +306,14 @@
       </div>
     </div>
   </footer>
+  <script src="js/users.js"></script>
+  <script src="js/validation.js"></script>
+  <script>  (function ($) {
+    $(function () {
+      form.init();
+    })
+  })
+  (jQuery);</script>
 </div>
 </body>
 </html>
