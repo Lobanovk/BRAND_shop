@@ -32,7 +32,9 @@ const user = {
   init() {
     $('.email-password').on('submit', e => user.autorizUser(e));
   },
-
+  /**
+   * Событие для проверки полей ввода
+   */
   autorizUser(e) {
     if (!user.validate()) {
       e.preventDefault();
@@ -41,7 +43,10 @@ const user = {
       console.log("Good");
     }
   },
-
+  /**
+   * Проверяет на совпадение email и password
+   * @returns {boolean} isValid Флаг, который показывает прошла проверка или нет
+   */
   validate() {
     let isValid = false;
     let userLogIn = {
