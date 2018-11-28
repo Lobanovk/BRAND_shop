@@ -137,7 +137,7 @@ const form = {
     if (!this.validate()) {
       e.preventDefault();
     } else {
-      registration();
+      user.registration();
     }
   },
   /**
