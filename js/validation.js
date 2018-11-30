@@ -91,6 +91,19 @@ const validationMethods = {
       return "Enter a valid card number";
     }
     return null;
+  },
+
+  /**
+   *Метод для проверки поля отзыва
+   * @param {HTMLInputElement} field поле, для проверки
+   * @returns {string/null} Строку с ошибкой или null, если ошибки не было
+   */
+  validMessage(field) {
+    const reg = /\w+/;
+    if (!reg.test($(field).val())) {
+      return "Fill in the message field";
+    }
+    return null;
   }
 
 };
@@ -108,7 +121,7 @@ const form = {
         selector: 'input[name="name"]',
         methods: [
           {name: 'validName'},
-          {name: 'validLength', args: ['>', 1 ]},
+          {name: 'validLength', args: ['>', 1]},
         ],
       },
       {
@@ -142,23 +155,24 @@ const form = {
   },
   /**
    * Валидирует форму.
+   * rules {Array} правила, по которым происходит валидация,по умолчанию правила валидации обьекта form
    */
-  validate() {
-  let isValid = true;
-  for (let rule of this.rules) {
-    for (let method of rule.methods){
-      const validFunction = validationMethods[method.name];
-      const errMessage = validFunction($(rule.selector), method.args);
-      if (errMessage) {
-        this.setInvalidField($(rule.selector), errMessage);
-        isValid = false;
-        break;
-      } else {
-        this.setValidField($(rule.selector));
+  validate(rules = this.rules) {
+    let isValid = true;
+    for (let rule of rules) {
+      for (let method of rule.methods) {
+        const validFunction = validationMethods[method.name];
+        const errMessage = validFunction($(rule.selector), method.args);
+        if (errMessage) {
+          this.setInvalidField($(rule.selector), errMessage);
+          isValid = false;
+          break;
+        } else {
+          this.setValidField($(rule.selector));
+        }
       }
     }
-  }
-  return isValid;
+    return isValid;
   },
   /**
    * Устанавливает класс ошибки валидации input и выводит сообщение ошибки
@@ -168,8 +182,8 @@ const form = {
   setInvalidField(field, message) {
     $(field).removeClass('is-valid').addClass('is-invalid');
 
-    if (!$(field).parent().find('.invalid-feedback').length){
-     $(field).after($('<div>', {
+    if (!$(field).parent().find('.invalid-feedback').length) {
+      $(field).after($('<div>', {
         text: message,
         class: 'invalid-feedback'
       }));
@@ -177,7 +191,7 @@ const form = {
   },
   /**
    * Устанавливает класс пройденной валидации
-  * @param {HTMLInputElement} field поле, для установки класса
+   * @param {HTMLInputElement} field поле, для установки класса
    */
   setValidField(field) {
     $(field).removeClass('is-invalid').addClass('is-valid');

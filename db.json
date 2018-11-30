@@ -57,7 +57,15 @@
       "price": "52.00"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "srcmini": "img/Layer_44.jpg",
+      "price": "52.00",
+      "name": "Mango People T-shirt",
+      "id": "4",
+      "quantity": "1"
+    }
+  ],
   "users": [
     {
       "username": "Kirill",
@@ -70,10 +78,19 @@
     {
       "username": "Mary",
       "password": "12345678",
-      "email": "mymail@list.com",
+      "email": "mary@inbox.com",
       "gender": "w",
-      "credit_card": "1111-1111-1111-1111",
+      "credit_card": "1234-1234-1234-1234",
       "id": 2
+    },
+    {
+      "username": "Petr",
+      "password": "12345678",
+      "email": "petr@inbox.com",
+      "gender": "m",
+      "credit_card": "8888-8888-8888-8888",
+      "id": 3
     }
-  ]
+  ],
+  "reviews": []
 }

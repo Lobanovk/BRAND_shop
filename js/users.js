@@ -21,7 +21,8 @@ const user = {
         gender: user.gender,
         credit_card: user.credit_card,
       },
-      success: function () {
+      success: function (success) {
+        console.log('Good');
       }
     })
   },
@@ -36,19 +37,20 @@ const user = {
    * Событие для проверки полей ввода
    */
   autorizUser(e) {
-    if (!user.validate()) {
-      e.preventDefault();
-      console.log("Fail");
-    } else {
-      console.log("Good");
-    }
+    user.validate(function (isValid) {
+      if (!isValid){
+        e.preventDefault();
+        console.log('Fail');
+      } else {
+        console.log('Good');
+      }
+    });
   },
   /**
    * Проверяет на совпадение email и password
    * @returns {boolean} isValid Флаг, который показывает прошла проверка или нет
    */
-  validate() {
-    let isValid = false;
+  validate(flag) {
     let userLogIn = {
       email: $('[name = "email"]').val(),
       password: $('[name = "password"]').val()
@@ -61,13 +63,13 @@ const user = {
         users.forEach(function (user) {
           if (user.email === userLogIn.email) {
             if (user.password === userLogIn.password) {
-              isValid = true;
+              flag(true);
             }
           }
+          flag(false);
         });
       }
     });
-    return isValid;
   },
 };
 

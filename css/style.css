@@ -1721,6 +1721,29 @@ body {
 .margin-top {
   margin-top: -12px; }
 
+.add-review {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 110px; }
+  .add-review textarea {
+    width: 70%;
+    height: 150px;
+    margin-bottom: 23px;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    font-size: 16px; }
+
+.special-h {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 15px;
+  color: #f16d7f;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 .margin-right {
   margin-right: 15px; }
 
