@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -155,10 +157,27 @@
       </div>
     </div>
     <section class="silder-goods">
-      <!--
-                  <div class="img-model">
-                  <img src="img/single_page.jpg" alt="model"></div>
-      -->
+      
+      
+      <div class="carousel">
+        
+        
+        <div id="carousel" class="carousel_inner">
+          <div class="carousel_box img-model">
+            <img src="img/single_page.jpg" alt="model"></div>
+          <div class="carousel_box img-model">
+            <img src="img/single_page.jpg" alt="model"></div>
+          <div class="carousel_box img-model">
+            <img src="img/single_page.jpg" alt="model"></div>
+        </div>
+      
+        <div class="carousel-arrow">
+          <i id="carousel_prev" class="fas fa-angle-left"></i>
+          <i id="carousel_next" class="fas fa-angle-right"></i>
+        </div>
+      </div>
+    
+    
     </section>
     <section class="info-good">
       <div class="colletion-swape">
@@ -280,11 +299,25 @@
         </div>
       </div>
     </section>
+    <section class="add-review">
+      <form class="email-password" action="#">
+        <h2 class="special-h"> Add Review</h2>
+        <div>
+          <label for="name"><p>Name</p></label>
+          <input type="text" name="name" id="name" placeholder="name" required>
+        </div>
+        <div>
+          <label for="message"><p>Message</p></label>
+          <textarea name="message" id="message" placeholder="message..."></textarea>
+        </div>
+        <input class="log-in" type="submit" name="add_review" value="Add review">
+      </form>
+    </section>
   </div>
   <footer class="footer">
     <section class="short-info">
       <div class=" short-info-text">
-        <div class="short-info-discription-img"><img src="img/img-face.png" alt="">
+        <div class="short-info-discription-img"><img src="img/footer/img-face.png" alt="">
           <div class="short-info-text-discription">
             <p class="short-info-quote">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
               a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium&raquo;</p>
@@ -384,6 +417,30 @@
       </div>
     </div>
   </footer>
+  <script src="js/validation.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/jq.carousel.min.js"></script>
+  <script src="js/jq.carousel.js"></script>
+  <script>
+    (function ($) {
+      $(function () {
+        reviews.sendReview();
+        var $carousel = $('#carousel').carousel({
+            start: 2,
+            indicator: true,
+          duration: 0.3,
+          }
+        );
+        $('#carousel_prev').on('click', function (ev) {
+          $carousel.carousel('prev');
+        });
+        $('#carousel_next').on('click', function (ev) {
+          $carousel.carousel('next');
+        });
+      })
+    })
+    (jQuery);
+  </script>
 </div>
 </body>
 

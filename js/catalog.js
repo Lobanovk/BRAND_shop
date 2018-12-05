@@ -51,8 +51,72 @@ const catalog = {
         });
       }
     });
-  }
+  },
 
+  productPage() {
+    $.ajax({
+      url: 'http://localhost:3000/catalog',
+      type: 'GET',
+      success: function (goods) {
+        goods.forEach(function (good) {
+          if (good.gender === 'm') {
+            $('<div>', {
+              class: 'parent-product',
+              append: $('<a>', {
+                href: 'single_page.html',
+                class: "product",
+                append: $('<img>', {
+                  class: 'img',
+                  src: good.src,
+                })
+              })
+                .add($('<div>', {
+                  class: 'product-info special-color-p-product',
+                  append: $('<p>', {
+                    text: good.name
+                  })
+                    .add('<span>', {
+                      text: '$' + good.price,
+                    })
+                }))
+                .add($('<div>', {
+                  class: 'parent-add-cart',
+                  append: $('<div>', {
+                      class: 'active-link',
+                      'data-id': good.id,
+                      'data-name': good.name,
+                      'data-price': good.price,
+                      'data-srcMini': good.srcMini,
+                      append: $('<img>', {
+                        src: "img/cart-white.svg",
+                      })
+                        .add($('<span>', {
+                          text: "Add to Cart"
+                        }))
+                    })
+                      .add($('<div>', {
+                        class: 'flex-svg-item',
+                        append: $('<div>', {
+                          class: 'active-link special-style',
+                          append: $('<img>', {
+                            src: 'img/change.svg'
+                          })
+                        })
+                          .add($('<div>', {
+                            class: 'active-link special-style',
+                            append: $('<img>', {
+                              src: 'img/Like.svg'
+                            })
+                          }))
+                      }))
+                }))
+            })
+              .appendTo('.img-items');
+          }
+        });
+      }
+    });
+  }
 };
 
 
