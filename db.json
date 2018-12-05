@@ -5,6 +5,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img1.png",
       "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
       "price": "52.00"
     },
     {
@@ -12,6 +13,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img2.png",
       "srcMini": "img/Layer_44.jpg",
+      "gender": "w",
       "price": "52.00"
     },
     {
@@ -19,6 +21,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img3.png",
       "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
       "price": "52.00"
     },
     {
@@ -26,6 +29,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img4.png",
       "srcMini": "img/Layer_44.jpg",
+      "gender": "w",
       "price": "52.00"
     },
     {
@@ -33,6 +37,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img5.png",
       "srcMini": "img/Layer_44.jpg",
+      "gender": "w",
       "price": "52.00"
     },
     {
@@ -40,6 +45,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img6.png",
       "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
       "price": "52.00"
     },
     {
@@ -47,6 +53,7 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img7.png",
       "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
       "price": "52.00"
     },
     {
@@ -54,6 +61,79 @@
       "name": "Mango People T-shirt",
       "src": "img/index/items-img8.png",
       "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 9,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-1.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 10,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-2.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 11,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-3.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 12,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-4.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 13,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-5.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 14,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-6.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 15,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-7.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 16,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-8.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
+      "price": "52.00"
+    },
+    {
+      "id": 17,
+      "name": "Mango People T-shirt",
+      "src": "img/product-page/product-9.jpg",
+      "srcMini": "img/Layer_43.jpg",
+      "gender": "m",
       "price": "52.00"
     }
   ],
@@ -70,10 +150,19 @@
     {
       "username": "Mary",
       "password": "12345678",
-      "email": "mymail@list.com",
+      "email": "mary@inbox.com",
       "gender": "w",
-      "credit_card": "1111-1111-1111-1111",
+      "credit_card": "1234-1234-1234-1234",
       "id": 2
+    },
+    {
+      "username": "Petr",
+      "password": "12345678",
+      "email": "petr@inbox.com",
+      "gender": "m",
+      "credit_card": "8888-8888-8888-8888",
+      "id": 3
     }
-  ]
+  ],
+  "reviews": []
 }

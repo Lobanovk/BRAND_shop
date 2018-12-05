@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -174,10 +176,10 @@
                 <p class="p-check">Register with&nbsp;us for future convenience</p>
                 <form action="#">
                   <div class="margin-bottom-for-checkout">
-                    <input type="radio" class="radio" name="a" id="guest" checked><label
+                    <input type="radio" class="radio" name="a" value="guest" id="guest" checked><label
                       for="guest">checkout as&nbsp;guest</label></div>
                   
-                  <input type="radio" class="radio" name="a" id="register"><label for="register">register</label>
+                  <input type="radio" class="radio" name="a" value="register" id="register"><label for="register">register</label>
                 </form>
                 <h5 class="h5-check margin">register and save time!</h5>
                 <p class="p-check">Register with&nbsp;us for future convenience</p>
@@ -196,12 +198,12 @@
                 <p class="p-check">Please log in&nbsp;below</p>
                 <form class="email-password" action="#">
                   <p>EMAIL&nbsp;ADDRESS<sup>&#42;</sup></p>
-                  <input type="email" required>
+                  <input type="email" name="email" required>
                   <p>PASSWORD<sup>&#42;</sup></p>
-                  <input type="password" required>
+                  <input type="password" name="password" required>
                   <p class="last-p"><sup>&#42;</sup>Required Fileds</p>
                   <div class="flex-special">
-                    <input class="log-in" type="submit" value="Log in">
+                    <input class="log-in" type="submit" name="log_in" value="Log in">
                     <a href="#">Forgot Password ?</a></div>
                 </form>
               
@@ -225,7 +227,7 @@
   <footer class="footer">
     <section class="short-info">
       <div class=" short-info-text">
-        <div class="short-info-discription-img"><img src="img/img-face.png" alt="">
+        <div class="short-info-discription-img"><img src="img/footer/img-face.png" alt="">
           <div class="short-info-text-discription">
             <p class="short-info-quote">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
               a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium&raquo;</p>
@@ -326,6 +328,16 @@
     </div>
   </footer>
 </div>
+
+<script src="js/users.js"></script>
+<script>
+  (function ($) {
+    $(function () {
+        user.init();
+    })
+  })
+  (jQuery);
+</script>
 </body>
 
 </html>

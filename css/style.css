@@ -579,23 +579,24 @@ body {
 .parent-add-cart {
   position: absolute;
   top: 98px;
-  width: 263px;
+  left: 70px;
+  width: 123px;
   display: none;
-  justify-content: center; }
-  .parent-add-cart div {
-    height: 39px;
-    border-radius: 3px;
-    border: 1px solid #ffffff;
-    padding: 0 13px;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    align-items: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
   .parent-add-cart span {
     padding-left: 4px; }
 
 .active-link {
+  height: 39px;
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  padding: 0 13px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s, transform 0.2s; }
   .active-link:hover {
@@ -1269,8 +1270,9 @@ body {
 .flex-svg-item {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px; }
-  .flex-svg-item a {
+  margin-top: 8px;
+  width: 123px; }
+  .flex-svg-item .special-style {
     padding: 0 18px; }
 
 .pagination {
@@ -1563,10 +1565,11 @@ body {
 .silder-goods {
   height: 777px;
   border: 1px solid #eaeaea;
-  background: url(../img/single_page.jpg) no-repeat center 0;
   background-color: #f7f7f7; }
 
 .info-good {
+  z-index: 2;
+  position: relative;
   max-width: 1140px;
   margin: 0 auto;
   margin-top: -86px;
@@ -1720,6 +1723,52 @@ body {
 
 .margin-top {
   margin-top: -12px; }
+
+.add-review {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 110px; }
+  .add-review textarea {
+    width: 70%;
+    height: 150px;
+    margin-bottom: 23px;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    font-size: 16px; }
+
+.special-h {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 15px;
+  color: #f16d7f;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.img-model {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.carousel-arrow {
+  margin-top: -356px;
+  display: flex;
+  justify-content: space-between; }
+  .carousel-arrow i {
+    background-color: #d8d8d8;
+    font-size: 15px;
+    padding: 15px;
+    color: white; }
+    .carousel-arrow i:hover {
+      cursor: pointer; }
+
+#carousel {
+  margin: 0 auto;
+  width: 600px;
+  overflow: hidden; }
 
 .margin-right {
   margin-right: 15px; }
