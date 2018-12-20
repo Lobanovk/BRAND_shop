@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Checkout</title>
+  <title>Check In</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-
 <body>
 <div class="wrapper">
   <div class="content">
     <header class="header">
       <div class="header-flex">
         <div class="header-left">
-          <a class="logo" href="index.html"> <img src="img/logo.png" alt="logo">BRAN<span
+          <a class="logo" href="index.php"> <img src="img/logo.png" alt="logo">BRAN<span
               class="special-D">D</span></a>
           <form class="form" action="#">
             <div class="browse"><span class="browse-text">Browse</span><i class="fa fa-caret-down"></i>
@@ -53,7 +54,7 @@
         </div>
         <div class="header-right">
           <div class="cart-position">
-            <a href="shoping_cart.html"><img src="img/cart.svg" alt="cart">
+            <a href="shoping_cart.php"><img src="img/cart.svg" alt="cart">
             </a>
             <div class="cart">
               <div class="goods">
@@ -90,10 +91,10 @@
               </div>
               <div class="checkout"><a class="checkout-text" href="#"><span>Checkout</span></a></div>
               <div class="go-to-card"><a class="go-to-card-text"
-                                         href="shoping_cart.html"><span>Go&nbsp;to&nbsp;cart</span></a>
+                                         href="shoping_cart.php"><span>Go&nbsp;to&nbsp;cart</span></a>
               </div>
-            
-            
+
+
             </div>
           </div>
           <div class="account"><a class="account-text" href="#">
@@ -103,8 +104,8 @@
     </header>
     <nav>
       <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Man</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="product.php">Man</a></li>
         <li><a href="#">Women</a>
           <div class="mega-box">
             <div class="mega-flex">
@@ -157,69 +158,49 @@
     </nav>
     <div class="breadcrumb">
       <div class="breadcrumb-text">
-        <h3>New Arrivals</h3>
-        <div class="breadcrumb-link"><a href="index.html">Home</a>/ <a href="#">Men </a>/ <a
-            href="#"><span>New Arrivals</span>
+        <h3>Check In</h3>
+        <div class="breadcrumb-link"><a href="index.php">Home</a>/ <a href="checkout.php">Checkout </a>/ <a
+            href="#"><span>Check In</span>
         </a></div>
       </div>
     </div>
-    <section class="check-in">
-      <ul class="check-in-menu">
-        <li>
-          <details open="open">
-            <summary class="outline_none"><h3>01. Shipping Adress</h3></summary>
-            <div class="check-or-guest">
-              <div class="check">
-                <h5 class="h5-check">Check as&nbsp;a&nbsp;guest or&nbsp;register</h5>
-                <p class="p-check">Register with&nbsp;us for future convenience</p>
-                <form action="#">
-                  <div class="margin-bottom-for-checkout">
-                    <input type="radio" class="radio" name="a" id="guest" checked><label
-                      for="guest">checkout as&nbsp;guest</label></div>
-                  
-                  <input type="radio" class="radio" name="a" id="register"><label for="register">register</label>
-                </form>
-                <h5 class="h5-check margin">register and save time!</h5>
-                <p class="p-check">Register with&nbsp;us for future convenience</p>
-                <div class="special-style-arrow"><i class="fas fa-angle-double-right"></i>
-                  <p class="p-check-light">Fast and easy checkout</p>
-                </div>
-                <div class="special-style-arrow"><i class="fas fa-angle-double-right"></i>
-                  <p class="p-check-light">Easy access to&nbsp;your order history and status</p>
-                </div>
-                <div class="button-continue">
-                  <a class="button-text" href="#"> <span>Continue</span></a>
-                </div>
-              </div>
-              <div class="registred">
-                <h5 class="h5-check">Already registed?</h5>
-                <p class="p-check">Please log in&nbsp;below</p>
-                <form class="email-password" action="#">
-                  <p>EMAIL&nbsp;ADDRESS<sup>&#42;</sup></p>
-                  <input type="email" required>
-                  <p>PASSWORD<sup>&#42;</sup></p>
-                  <input type="password" required>
-                  <p class="last-p"><sup>&#42;</sup>Required Fileds</p>
-                  <div class="flex-special">
-                    <input class="log-in" type="submit" value="Log in">
-                    <a href="#">Forgot Password ?</a></div>
-                </form>
-              
-              </div>
-            </div>
-          </details>
-        </li>
-        <li>
-          <h3>02. BILLING INFORMATION</h3></li>
-        <li>
-          <h3>03. SHIPPING INFORMATION</h3></li>
-        <li>
-          <h3>04. SHIPPING METHOD</h3></li>
-        <li>
-          <h3>05. PAYMENT METHOD</h3></li>
-        <li>
-          <h3>06. ORDER REVIEW</h3></li>
-      </ul>
+    <section class="check-in_container">
+      <div class="registred">
+        <form class="email-password" method="post">
+          <div>
+          <p>Name<sup>&#42;</sup></p>
+          <input type="text" name="name" placeholder="name" required>
+          </div>
+          <div>
+          <p>Gender<sup>&#42;</sup></p>
+          <div class="margin-bottom-for-checkout margin-left">
+            <input type="radio" class="radio" name="gender" id="M" value="1" checked><label class="margin-right"
+              for="M">Men</label>
+            <input type="radio" class="radio" name="gender" id="W" value="2" ><label for="W">Woman</label>
+          </div>
+          </div>
+          <div>
+          <p>EMAIL&nbsp;ADDRESS<sup>&#42;</sup></p>
+          <input type="text" name="email" placeholder="email" required>
+          </div>
+          <div>
+          <p>ADD Credit card<sup>&#42;</sup></p>
+          <input class="delete-arrow" type="text" name="credit_card" placeholder="credit card" required>
+          </div>
+          <div>
+          <p>PASSWORD<sup>&#42;</sup></p>
+          <input type="password" name="password" placeholder="password" required>
+          </div>
+          <div>
+          <p>REPEAT PASSWORD<sup>&#42;</sup></p>
+          <input type="password" name="password_repeat" placeholder="repeat password" required>
+          </div>
+          <p class=" last-p"><sup>&#42;</sup>Required Fileds</p>
+          <div class="flex-special">
+            <input class="log-in" type="submit" value="Check In">
+          </div>
+        </form>
+      </div>
     </section>
   </div>
   <footer class="footer">
@@ -325,7 +306,14 @@
       </div>
     </div>
   </footer>
+  <script src="js/users.js"></script>
+  <script src="js/validation.js"></script>
+  <script>  (function ($) {
+    $(function () {
+      form.init();
+    })
+  })
+  (jQuery);</script>
 </div>
 </body>
-
 </html>

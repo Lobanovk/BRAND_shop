@@ -54,7 +54,7 @@
         </div>
         <div class="header-right">
           <div class="cart-position">
-            <a href="shoping_cart.html"><img src="img/cart.svg" alt="cart">
+            <a href="shoping_cart.php"><img src="img/cart.svg" alt="cart">
             </a>
             <div class="cart">
               <div id="cart">
@@ -106,12 +106,12 @@
               </div>
               <div class="flex-text-between">
                 <p>TOTAL</p>
-                <p>$<span id="all-price"></span</p>
+                <p>$<span id="all-price"></span></p>
               </div>
               <div class="checkout"><a class="checkout-text"
-                                       href="checkout.html"><span>Checkout</span></a></div>
+                                       href="checkout.php"><span>Checkout</span></a></div>
               <div class="go-to-card"><a class="go-to-card-text"
-                                         href="shoping_cart.html"><span>Go&nbsp;to&nbsp;cart</span></a>
+                                         href="shoping_cart.php"><span>Go&nbsp;to&nbsp;cart</span></a>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@
     <nav>
       <ul class="menu">
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="product.html">Man</a></li>
+        <li><a href="product.php">Man</a></li>
         <li><a href="#">Women</a>
           <div class="mega-box">
             <div class="mega-flex">
@@ -229,7 +229,7 @@
         <!---->
         <!---->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img1.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img1.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -252,7 +252,7 @@
         <!---->
         <!---->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img2.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img2.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -264,7 +264,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img3.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img3.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -276,7 +276,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img4.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img4.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -288,7 +288,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img5.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img5.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -300,7 +300,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img6.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img6.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -312,7 +312,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img7.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img7.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -324,7 +324,7 @@
           <!--</div>-->
         <!--</div>-->
         <!--<div class="parent-product">-->
-          <!--<a class="product" href="single_page.html"> <img class="img" src="img/index/items-img8.png"-->
+          <!--<a class="product" href="single_page.php"> <img class="img" src="img/index/items-img8.png"-->
                                                            <!--alt="items-poduct">-->
             <!--<div class="product-info">-->
               <!--<p>Mango People T-shirt</p> <span>$52.00</span></div>-->
@@ -373,6 +373,9 @@
   <footer class="footer">
     <section class="short-info">
       <div class=" short-info-text">
+
+
+
         <div class="short-info-discription-img"><img src="img/footer/img-face.png" alt="">
           <div class="short-info-text-discription">
             <p class="short-info-quote">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
@@ -386,6 +389,7 @@
             </div>
           </div>
         </div>
+
         <div class="subscribe-container">
           <div class="subscride">
             <h5>Subscribe</h5>

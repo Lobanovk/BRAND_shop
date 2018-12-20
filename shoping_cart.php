@@ -19,7 +19,7 @@
         <header class="header">
             <div class="header-flex ">
                 <div class="header-left">
-                    <a class="logo" href="index.html"> <img src="img/logo.png" alt="logo">BRAN<span
+                    <a class="logo" href="index.php"> <img src="img/logo.png" alt="logo">BRAN<span
                             class="special-D">D</span></a>
                     <form class="form" action="#">
                         <div class="browse"><span class="browse-text">Browse</span><i class="fa fa-caret-down"></i>
@@ -80,7 +80,7 @@
                                 <p>$500.00</p>
                             </div>
                             <div class="checkout"><a class="checkout-text"
-                                                     href="checkout.html"><span>Checkout</span></a></div>
+                                                     href="checkout.php"><span>Checkout</span></a></div>
                             <div class="go-to-card"><a class="go-to-card-text"
                                                        href="#"><span>Go&nbsp;to&nbsp;cart</span></a></div>
                         </div>
@@ -94,8 +94,8 @@
         </header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Man</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="product.php">Man</a></li>
                 <li><a href="#">Women</a>
                     <div class="mega-box">
                         <div class="mega-flex">
@@ -150,7 +150,7 @@
         <div class="breadcrumb">
             <div class="breadcrumb-text">
                 <h3>New Arrivals</h3>
-                <div class="breadcrumb-link"><a href="index.html">Home</a>/ <a href="#">Men </a>/ <a href="#"><span>New Arrivals</span>
+                <div class="breadcrumb-link"><a href="index.php">Home</a>/ <a href="#">Men </a>/ <a href="#"><span>New Arrivals</span>
                 </a></div>
             </div>
         </div>
