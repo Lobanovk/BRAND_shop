@@ -1,0 +1,36 @@
+<script src="js/validation.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/jq.carousel.min.js"></script>
+<script src="js/jq.carousel.js"></script>
+<script>
+  (function ($) {
+    $(function () {
+      reviews.sendReview();
+      var $carousel = $('#carousel').carousel({
+          start: 2,
+          indicator: true,
+          duration: 0.3,
+        }
+      );
+      $('#carousel_prev').on('click', function (ev) {
+        $carousel.carousel('prev');
+      });
+      $('#carousel_next').on('click', function (ev) {
+        $carousel.carousel('next');
+      });
+
+      $.ajax({
+        url: 'php/watch_reviews.php',
+        type: 'POST',
+        data: {
+          id: location.href.replace(location.origin+location.pathname+"?id=", ''),
+        },
+        success: function (review) {
+          $('#watch-review').html(review);
+        }
+      });
+
+    })
+  })
+  (jQuery);
+</script>
