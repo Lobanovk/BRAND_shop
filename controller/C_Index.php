@@ -1,16 +1,20 @@
 <?php
 
-include_once 'models/m_index.php';
+include_once 'models/Products.php';
+include_once 'models/Basket.php';
 
 class C_Index extends C_Base
 {
 
   private $model = null;
+  private $db = null;
 
   public function __construct($page)
   {
     parent::__construct($page);
-    $this->model = new M_Index(9);
+    $this->model = new Products();
+    $this->db = new Basket();
+    //unset($_SESSION['id_user']);
   }
 
   public function action_index()
@@ -30,9 +34,37 @@ class C_Index extends C_Base
     $this->script = $this->TemplateDir('script.tmpl', []);
   }
 
-  public function action_goods()
+  public function method_index()
   {
-   echo "FKFKFKFKF";
-   //$this->model->getGoods();
+    echo $this->model->getGoods(9);
+  }
+
+  public function method_addcart()
+  {
+    if ($this->isPost()) {
+      if (isset($_SESSION['id_user']))
+        $this->db->insertGood($_SESSION['id_user'], $_POST['id_catalog'], $_POST['quantity'], 1);
+    }
+  }
+
+  public function method_see_cart()
+  {
+    if($_SESSION['id_user'])
+    echo $this->db->selectBasket($_SESSION['id_user']);
+  }
+
+  public function method_update_cart()
+  {
+    if ($this->isPost()) {
+      if (isset($_SESSION['id_user']))
+        $this->db->updateGood($_POST['quantity'], null, "id_catalog =". $_POST['id_catalog']. " and id_user = ". $_SESSION['id_user'] );
+    }
+  }
+
+  public function method_delete_cart(){
+    if ($this->isPost()) {
+      if (isset($_SESSION['id_user']))
+        $this->db->deleteGoods("id_catalog =". $_POST['id_catalog']. " and id_user = ". $_SESSION['id_user']);
+    }
   }
 }

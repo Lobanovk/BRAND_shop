@@ -1,16 +1,32 @@
 <?php
+include_once 'models/Products.php';
+include_once 'models/Basket.php';
 
-class C_SinglePage extends C_Base{
+class C_SinglePage extends C_Base
+{
+
+  private $id_catalog;
+  private static $product;
+
   public function __construct($page)
   {
     parent::__construct($page);
-    //self::$database = new M_Index();
+    self::$product = new Products();
+    $this->SetIdCatalog($_GET['id_catalog']);
   }
 
-  public function action_index() {
+  private function SetIdCatalog($id_catalog)
+  {
+    return $this->id_catalog = $id_catalog;
+  }
+
+  public function action_index()
+  {
+
+    $product = self::$product->getProduct($this->id_catalog);
 
     $varsSliderGood = [
-      'image_good' => $this->TemplateDir('image-good.tmpl', [])
+      'image_good' => $this->TemplateDir('image-good.tmpl', ['product' => $product['src']])
     ];
 
     $varsContent = [
@@ -26,4 +42,11 @@ class C_SinglePage extends C_Base{
     $this->footer = $this->Template('footer.tmpl', []);
     $this->script = $this->TemplateDir('script.tmpl', []);
   }
+
+  public function method_index()
+  {
+    echo self::$product->getSingle(17);
+  }
+
+
 }

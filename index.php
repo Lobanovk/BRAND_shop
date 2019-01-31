@@ -24,7 +24,7 @@ switch ($_GET['page']) {
     $controller = new C_SinglePage('single-page');
     break;
   case 'registration':
-    $controller = new C_Checkout('registration');
+    $controller = new C_Registration('registration');
     break;
   default:
     $controller = new C_Index('index');

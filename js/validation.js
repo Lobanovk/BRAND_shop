@@ -108,7 +108,6 @@ const validationMethods = {
 
 };
 
-
 const form = {
   rules: null,
   /**

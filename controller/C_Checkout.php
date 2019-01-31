@@ -1,11 +1,14 @@
 <?php
+include_once 'models/User.php';
 
 class C_Checkout extends C_Base {
+
+  private $user;
 
   public function __construct($page)
   {
     parent::__construct($page);
-    //self::$database = new M_Index();
+    $this->user = new User();
   }
 
   public function action_index() {
@@ -21,5 +24,11 @@ class C_Checkout extends C_Base {
     $this->content = $this->TemplateDir('content.tmpl', $varsContent);
     $this->footer = $this->Template('footer.tmpl', []);
     $this->script = $this->TemplateDir('script.tmpl', []);
+  }
+
+  public function method_index(){
+    if ($this->isPost()){
+      echo $this->user->login($_POST['email'], $_POST['password']);
+    }
   }
 }
